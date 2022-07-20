@@ -15,7 +15,7 @@ const EmployeeDetails = () => {
 
   const { data, error, isLoading } = useGetEmployeeByIdQuery(id);
 
-  console.log("details page------------------------", data);
+ 
 
   return (
     <>

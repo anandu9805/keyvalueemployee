@@ -25,11 +25,16 @@ const EmployeeList = () => {
       </div>
       <div class="employeelistcard1">
         <h1 id="employeelist_heading">Employee List</h1>
+        <div></div>
+        <label id="Filter">Filter By</label>
+        <button id="statusbutton" onClick={() => {}}>
+          status
+        </button>
         <button id="createbutton" onClick={() => navigate("/create")}>
           create employee
         </button>
       </div>
-      <div 
+      <div
       // className="card2list"
       >
         <div class="allemployee_listheading">
@@ -50,8 +55,7 @@ const EmployeeList = () => {
           data.data.map((item) => {
             console.log(item);
             return (
-              <div >
-                
+              <div>
                 <div className="employee_item_div">
                   <p className="allemployee_listheading_empname">
                     {item.empname}
