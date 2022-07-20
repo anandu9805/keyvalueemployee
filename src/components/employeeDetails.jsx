@@ -15,19 +15,17 @@ const EmployeeDetails = () => {
 
   const { data, error, isLoading } = useGetEmployeeByIdQuery(id);
 
- 
-
   return (
     <>
       <div class="sidenavlist">
         <div>
-          <img src="assets/kv logo.png" alt="keyvalue" />
+          <img src="kv logo.png" alt="keyvalue" />
         </div>
       </div>
       <div class="employeelistcard1">
         <h1 id="employeelist_heading">Employee Details</h1>
         <button
-          id="createbutton"
+          id="editbutton"
           onClick={() => {
             navigate(`/update/${id}`);
           }}
@@ -44,43 +42,43 @@ const EmployeeDetails = () => {
         ) : data ? (
           <>
             <div>
-              <label>Employee Name</label>
+              <label className="detaillabel">Employee Name</label>
               <br />
               {data.data.empname}
             </div>
             <div>
-              <label>Employee ID</label>
+              <label className="detaillabel">Employee ID</label>
               <br />
               {data.data.id}
             </div>
             <div>
-              <label>Joining date</label>
+              <label className="detaillabel">Joining date</label>
               <br />
               {data.data.joining_date}
             </div>
             <div>
-              <label>Role</label>
+              <label className="detaillabel">Role</label>
               <br />
               {data.data.role}
             </div>
             <div>
-              <label>Status</label>
+              <label className="detaillabel">Status</label>
               <br />
               {data.data.status}
             </div>
             <div>
-              <label>Experience</label>
+              <label className="detaillabel">Experience</label>
               <br />
               {data.data.Experience}
             </div>
 
             <div>
-              <label>Address</label>
+              <label className="detaillabel">Address</label>
               <br />
               {data.data.address.address}
             </div>
             <div>
-              <label>Employee ID Proof</label>
+              <label className="detaillabel">Employee ID Proof</label>
               <br />
               <img src="assets/uploadfile.svg" alt="keyvalue" />
             </div>

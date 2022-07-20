@@ -28,7 +28,7 @@ const EmployeeUpdate = () => {
     Experience: "",
     email: "",
     departmentId: "",
-    password: "",
+    
   });
   const set = (name, value) => {
     const newEmp = {
@@ -50,7 +50,7 @@ const EmployeeUpdate = () => {
         Experience: data.data.Experience,
         email: data.data.email,
         departmentId: data.data.departmentId,
-        password: data.data.password,
+       
       });
     }
   }, [data]);
@@ -79,6 +79,7 @@ const EmployeeUpdate = () => {
               <div>
                 <label id="enlabel">Employee Name</label>
                 <input
+                className="updateinput"
                   type="text"
                   id="en"
                   name="ename"
@@ -92,6 +93,7 @@ const EmployeeUpdate = () => {
                 <label id="Ridlabel">Role</label>
 
                 <select
+                className="updateinput"
                   name="Rname"
                   id="Rid"
                   defaultValue={formvalues.role}
@@ -105,6 +107,7 @@ const EmployeeUpdate = () => {
               <div>
                 <label id="addidlabel">Addresss</label>
                 <input
+                className="updateinput"
                   type="text"
                   id="addid"
                   name="Add"
@@ -120,6 +123,7 @@ const EmployeeUpdate = () => {
               <div>
                 <label id="didlabel">Department ID</label>
                 <input
+                className="updateinput"
                   type="text"
                   id="eid"
                   name="emid"
@@ -134,6 +138,7 @@ const EmployeeUpdate = () => {
                 <label id="Sidlabel">Status</label>
 
                 <select
+                className="updateinput"
                   name="Sname"
                   id="Sid"
                   value={formvalues.status}
@@ -149,6 +154,7 @@ const EmployeeUpdate = () => {
               <div>
                 <label id="pidlabel">Upload ID Proof</label>
                 <input
+                className="updateinput"
                   type="file"
                   id="pid"
                   name="pname"
@@ -160,6 +166,7 @@ const EmployeeUpdate = () => {
               <div>
                 <label id="jdlabel">Joining Date</label>
                 <input
+                className="updateinput"
                   type="text"
                   id="jd"
                   name="Jdate"
@@ -172,6 +179,7 @@ const EmployeeUpdate = () => {
               <div>
                 <label id="Eidlabel">Experience</label>
                 <input
+                className="updateinput"
                   type="text"
                   id="Eid"
                   name="Exp"
@@ -185,6 +193,7 @@ const EmployeeUpdate = () => {
               <div>
                 <label id="emailidlabel">Email</label>
                 <input
+                className="updateinput"
                   type="text"
                   id="emailid"
                   name="ename"
@@ -194,22 +203,9 @@ const EmployeeUpdate = () => {
                   onChange={(e) => set("email", e.target.value)}
                 />
               </div>
-              <div>
-                <label id="passwordlabel">Password</label>
-                <input
-                  type="password"
-                  id="passwordid"
-                  name="passwordname"
-                  placeholder="Password"
-                  value={formvalues.password}
-                  defaultValue={formvalues.password}
-                  onChange={(e) => set("password", e.target.value)}
-                />
-              </div>
+             
             </div>
-          </div>
-
-          <div id="buttonsession">
+            <div >
             <button
               type="button"
               id="createbutton2"
@@ -219,11 +215,16 @@ const EmployeeUpdate = () => {
             >
               Update
             </button>
-          </div>
-
-          <button type="button" id="cancelbutton2" onClick={() => {}}>
+            <button type="button" id="updatepagecancelbutton" onClick={() => {}}>
             Cancel
           </button>
+           
+          </div>
+          </div>
+
+        
+
+        
         </form>
       </div>
     </>

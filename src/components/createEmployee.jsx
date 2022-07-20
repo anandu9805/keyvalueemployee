@@ -52,13 +52,14 @@ const CreateEmployee = () => {
       <div class="employeelistcard1">
         <h1 id="employeelist_heading">Create Employee</h1>
       </div>
-      <div>
+      <div >
         <form name="Employeeform">
           <div id="createemployeeformsession">
             <div>
               <div>
                 <label id="enlabel">Employee Name</label>
                 <input
+                className="createinput"
                   type="text"
                   id="en"
                   name="ename"
@@ -71,6 +72,7 @@ const CreateEmployee = () => {
                 <label id="Ridlabel">Role</label>
 
                 <select
+                className="createinput"
                   name="Rname"
                   id="Rid"
                   value={formvalues.role}
@@ -83,6 +85,7 @@ const CreateEmployee = () => {
               <div>
                 <label id="addidlabel">Addresss</label>
                 <input
+                className="createinput"
                   type="text"
                   id="addid"
                   name="Add"
@@ -97,6 +100,7 @@ const CreateEmployee = () => {
               <div>
                 <label id="didlabel">Department ID</label>
                 <input
+                className="createinput"
                   type="text"
                   id="eid"
                   name="emid"
@@ -110,6 +114,7 @@ const CreateEmployee = () => {
                 <label id="Sidlabel">Status</label>
 
                 <select
+                className="createinput"
                   name="Sname"
                   id="Sid"
                   value={formvalues.status}
@@ -124,6 +129,7 @@ const CreateEmployee = () => {
               <div>
                 <label id="pidlabel">Upload ID Proof</label>
                 <input
+                className="createinput"
                   type="file"
                   id="pid"
                   name="pname"
@@ -135,22 +141,24 @@ const CreateEmployee = () => {
               <div>
                 <label id="jdlabel">Joining Date</label>
                 <input
+                className="createinput"
                   type="text"
                   id="jd"
                   name="Jdate"
                   placeholder="Joining Date"
-                  value={formvalues.joiningdate}
+                  value={formvalues.joining_date}
                   onChange={set("joining_date")}
                 />
               </div>
               <div>
                 <label id="Eidlabel">Experience</label>
                 <input
+                className="createinput"
                   type="text"
                   id="Eid"
                   name="Exp"
                   placeholder="Experience"
-                  value={formvalues.experience}
+                  value={formvalues.Experience}
                   onChange={set("Experience")}
                 />
               </div>
@@ -158,6 +166,7 @@ const CreateEmployee = () => {
               <div>
                 <label id="emailidlabel">Email</label>
                 <input
+                className="createinput"
                   type="text"
                   id="emailid"
                   name="ename"
@@ -169,6 +178,7 @@ const CreateEmployee = () => {
               <div>
                 <label id="passwordlabel">Password</label>
                 <input
+                className="createinput"
                   type="password"
                   id="passwordid"
                   name="passwordname"
@@ -206,9 +216,9 @@ const CreateEmployee = () => {
                   ]}
                 />
               </div> */}
-          </div>
-
-          <div id="buttonsession">
+              
+          
+          <div >
             <button
               type="button"
               id="createbutton2"
@@ -219,11 +229,15 @@ const CreateEmployee = () => {
             >
               create
             </button>
-          </div>
-
-          <button type="button" id="cancelbutton2" onClick={() => {}}>
+            <button type="button" id="createpagecancelbutton" onClick={() => {}}>
             Cancel
           </button>
+          </div>
+          </div>
+
+          
+
+        
         </form>
       </div>
     </>
