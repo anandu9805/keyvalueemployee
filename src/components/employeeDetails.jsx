@@ -18,9 +18,15 @@ const EmployeeDetails = () => {
   return (
     <>
       <div class="sidenavlist">
-        <div>
-          <img src="kv logo.png" alt="keyvalue" />
-        </div>
+      <div>
+  <img src="assets/kvlogo.png" alt="Image" />
+</div>
+        <div class="sidenav2">
+      <div className="sidenavemplist" >
+        <img src="assets/Group.svg" alt="keyvalue" class="avatar" />
+        <p className="sidenavemppara" >Employee List</p>
+      </div>
+    </div>
       </div>
       <div class="employeelistcard1">
         <h1 id="employeelist_heading">Employee Details</h1>

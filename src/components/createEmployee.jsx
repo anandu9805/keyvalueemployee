@@ -5,6 +5,7 @@ import "../styles/styles.css";
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { useCreateEmployeeMutation } from "../services/employeeService";
+// import kvlogo from "../src/assets/kvlogo.png";
 const CreateEmployee = () => {
   const navigate = useNavigate();
   const [createEmployee, result] = useCreateEmployeeMutation ();
@@ -45,9 +46,17 @@ const CreateEmployee = () => {
   return (
     <>
       <div class="sidenavlist">
+      <div class="sidenavlist">
         <div>
-          <img src="assets/kv logo.png" alt="keyvalue" />
+          <img src="./assets/kvlogo.png" alt="keyvalue" />
         </div>
+        <div class="sidenav2">
+      <div className="sidenavemplist" >
+        <img src="./assets/Group.svg" alt="keyvalue" class="avatar" />
+        <p className="sidenavemppara" >Employee List</p>
+      </div>
+    </div>
+      </div>
       </div>
       <div class="employeelistcard1">
         <h1 id="employeelist_heading">Create Employee</h1>

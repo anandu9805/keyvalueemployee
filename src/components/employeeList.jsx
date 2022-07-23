@@ -11,6 +11,7 @@ const EmployeeList = () => {
   const [deleteEmployeeById, result] = useDeleteEmployeeByIdMutation();
   const navigate = useNavigate();
 
+
   return (
     <>
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
@@ -18,13 +19,22 @@ const EmployeeList = () => {
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
       />
-      <div class="sidenavlist">
-        <div>
-          <img src="assets/kv logo.png" alt="keyvalue" />
-        </div>
+      <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'></link>
+       <div class="sidenavlist">
+  <div>
+  <img src="assets/kvlogo.png" alt="Image" />
+</div>
+        <div class="sidenav2">
+      <div className="sidenavemplist" >
+      <img src="assets/Group.svg" alt="keyvalue" class="avatar" />
+        <p className="sidenavemppara" >Employee List</p>
+      </div>
+    </div>
       </div>
       <div class="employeelistcard1">
-        <h1 id="employeelist_heading">Employee List</h1>
+        <h1 id="employeelist_heading"
+          style={{fontFamily:"Nunito Sans"}}
+        >Employee List</h1>
         <div></div>
         <label id="Filter">Filter By</label>
         <button id="statusbutton" onClick={() => {}}>
@@ -65,7 +75,7 @@ const EmployeeList = () => {
                     {item.joining_date}
                   </p>
                   <p className="allemployee_listheading_role">{item.role}</p>
-                  <p className="allemployee_listheading_status">
+                  <p className={item.status}>
                     {item.status}
                   </p>
                   <p className="  allemployee_listheading_experience">

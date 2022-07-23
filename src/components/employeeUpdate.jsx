@@ -65,9 +65,17 @@ const EmployeeUpdate = () => {
   return (
     <>
       <div class="sidenavlist">
+      <div class="sidenavlist">
         <div>
-          <img src="assets/kv logo.png" alt="keyvalue" />
+          <img src="./assest/kvlogo.png" alt="keyvalue" />
         </div>
+        <div class="sidenav2">
+      <div className="sidenavemplist" >
+        {/* <img src="./assets/Group.svg" alt="keyvalue" class="avatar" /> */}
+        <p className="sidenavemppara" >Employee List</p>
+      </div>
+    </div>
+      </div>
       </div>
       <div class="employeelistcard1">
         <h1 id="employeelist_heading">Update Employee</h1>

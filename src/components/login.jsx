@@ -15,8 +15,8 @@ const Login = () => {
   return (
     <>
       <div class="sidenavlogin">
-        <div>
-          <img src="assets/loginimage.png" alt="keyvalue" />
+        <div id="Loginimg">
+          <img  src="assets/loginimage.png" alt="keyvalue" />
         </div>
       </div>
       <div class="card2">
@@ -26,7 +26,7 @@ const Login = () => {
             <div id="formsession">
               <div>
                 <div>
-                  <img src="assets/kv logo.png" alt="Image" />
+                  <img src="assets/kvlogo.png" alt="Image" />
                 </div>
                 {items.map((inputs) => (
                   <InputField
@@ -36,8 +36,9 @@ const Login = () => {
                     onChange={() => {}}
                   />
                 ))}
+                <button  id ="Loginbtn"label="Login" onClick={() => navigate("/list")}>Login</button>
 
-                <Button label="Login" handleClick={() => navigate("/list")} />
+                {/* <Button label="Login" handleClick={() => navigate("/list")} /> */}
               </div>
             </div>
           </form>
